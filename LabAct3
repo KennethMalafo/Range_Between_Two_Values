@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class RangeBetweenTwoValues {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int MinValue, MaxValue, x;
+
+        //Getting user input
+        System.out.print("\nInsert a Minimum value: ");
+            MinValue = input.nextInt();
+        System.out.print("Insert a Maximum value: ");
+            MaxValue = input.nextInt();
+        //Print range
+        System.out.print("Range: ");
+            for (x = MinValue; x <= MaxValue; x++)
+                {System.out.print(x + " ");}
+        //Print Random Number
+        System.out.println("");
+            int LuckyValue = (int)(Math.random()*(MaxValue-MinValue))+MinValue;
+        System.out.print("Random Number: "+LuckyValue);
+        //Conversion of int
+        String Convert = Integer.toString(LuckyValue);
+        System.out.print("\nThe Lucky winner is number "+Convert);
+    }
+}
